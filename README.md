@@ -1,1 +1,1 @@
-# Network-File-Transfer-
+This project develops a secure file-sharing application using a  client-server model in Python. It leverages socket programming  to enable authenticated clients to connect to a central server,  request file lists, and perform file uploads and downloads over  a network.
