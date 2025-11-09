@@ -1,0 +1,19 @@
+To test file transfer code, use commands like ping to check network connectivity, and client commands like put, get, mput, and mget to send and receive files. For secure transfers, use SFTP or FTPS commands in the terminal or a dedicated client like FileZilla. Other tests involve checking transfer modes, file naming conventions, maximum file sizes, and permissions. 
+Command-line testing
+Check connectivity: Use ping to check if the server is reachable. For example, {Link: ping ftp.myftsite.com https://study.com/academy/lesson/video/testing-an-ftp-connection.html}.
+Connect and authenticate: Use a client like sftp for a secure connection. For example, {Link: sftp -P <PORT> [your_sftpuser]@[your_sftp_server_IP] https://www.opswat.com/docs/mdmft/knowledge-base/how-to-test-sftp-connection-and-file-transfer-via-cli-} .
+Transfer files:
+put <filename>: Upload a single file.
+get <filename>: Download a single file.
+mput <filename>: Upload multiple files.
+mget <filename>: Download multiple files. 
+Test cases for functionality and robustness 
+Verify that file transfer starts successfully.
+Confirm that both binary and ASCII transfer modes are supported and work correctly.
+Test with different file types, such as files with numbers or special characters in their names.
+Check file handling for maximum character lengths and empty files.
+Ensure files can be transferred to a server with specific permissions, such as 644. 
+Considerations for secure protocols
+SFTP: Use the sftp command to connect. Adding a -v flag can provide more detailed debug information if a connection fails, as shown in OPSWAT.
+FTPS: This uses SSL/TLS for security and has its own set of client commands or requires a client application like FileZilla to handle the secure connection.
+Firewalls: Be aware that FTP uses multiple ports, which can cause issues with firewalls. SFTP typically uses a single port (e.g., port 22) and is often less problematic with firewalls. 
